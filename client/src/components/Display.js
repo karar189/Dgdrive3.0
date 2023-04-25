@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Display.css";
+
 const Display = ({ contract, account }) => {
   const [data, setData] = useState("");
+
   const getdata = async () => {
     let dataArray;
     const Otheraddress = document.querySelector(".address").value;
@@ -25,12 +27,7 @@ const Display = ({ contract, account }) => {
       const images = str_array.map((item, i) => {
         return (
           <a href={item} key={i} target="_blank">
-            <img
-              key={i}
-              src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
-              alt="new"
-              className="image-list"
-            ></img>
+            <img key={i} src={`${item}`} alt="new" className="image-list"></img>
           </a>
         );
       });
@@ -39,6 +36,7 @@ const Display = ({ contract, account }) => {
       alert("No image to display");
     }
   };
+
   return (
     <>
       <div className="image-list">{data}</div>

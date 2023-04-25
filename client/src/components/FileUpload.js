@@ -4,6 +4,7 @@ import "./FileUpload.css";
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No image selected");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (file) {
@@ -16,8 +17,8 @@ const FileUpload = ({ contract, account, provider }) => {
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {
-            pinata_api_key: `e5ba67a55ffdd699307f`,
-            pinata_secret_api_key: `81916c8568773c6610d72ecdc06b164fd0f017fb1082b1f3479b85aa1e8b9239`,
+            pinata_api_key: `06fd8359971a4c47e90d`,
+            pinata_secret_api_key: `228ea81ea283ff66bba0c0b76cc4a660abf8bc54844b2c486878072cdefac9c9`,
             "Content-Type": "multipart/form-data",
           },
         });
@@ -34,9 +35,10 @@ const FileUpload = ({ contract, account, provider }) => {
     setFileName("No image selected");
     setFile(null);
   };
+
   const retrieveFile = (e) => {
     const data = e.target.files[0]; //files array of files object
-    // console.log(data);
+    console.log(data);
     const reader = new window.FileReader();
     reader.readAsArrayBuffer(data);
     reader.onloadend = () => {
@@ -45,6 +47,7 @@ const FileUpload = ({ contract, account, provider }) => {
     setFileName(e.target.files[0].name);
     e.preventDefault();
   };
+
   return (
     <div className="top">
       <form className="form" onSubmit={handleSubmit}>
