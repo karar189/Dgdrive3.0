@@ -20,8 +20,8 @@ const Display = ({ contract, account }) => {
     if (!isEmpty) {
       const str = dataArray.toString();
       const str_array = str.split(",");
-      // console.log(str);
-      // console.log(str_array);
+      console.log(str);
+      console.log(str_array);
       const images = str_array.map((item, i) => {
         return (
           <a href={item} key={i} target="_blank">
