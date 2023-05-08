@@ -39,7 +39,9 @@ const Display = ({ contract, account }) => {
 
   return (
     <>
-      <div className="image-list">{data}</div>
+      {/* <div className="image-list">{data}</div> */}
+      <div className="center">
+      <div className="mirror2">
       <input
         type="text"
         placeholder="Enter Address"
@@ -48,6 +50,9 @@ const Display = ({ contract, account }) => {
       <button className="center button" onClick={getdata}>
         Get Data
       </button>
+      </div>
+      </div>
+
     </>
   );
 };

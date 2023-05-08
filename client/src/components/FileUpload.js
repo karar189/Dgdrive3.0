@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./FileUpload.css";
+import upload from "../../src/upload.svg";
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No image selected");
@@ -51,9 +52,13 @@ const FileUpload = ({ contract, account, provider }) => {
   return (
     <div className="top">
       <form className="form" onSubmit={handleSubmit}>
+
+        <div className="mirror">
+
         <label htmlFor="file-upload" className="choose">
           Choose Image
         </label>
+
         <input
           disabled={!account}
           type="file"
@@ -61,10 +66,16 @@ const FileUpload = ({ contract, account, provider }) => {
           name="data"
           onChange={retrieveFile}
         />
+
         <span className="textArea">Image: {fileName}</span>
+
         <button type="submit" className="upload" disabled={!file}>
-          Upload File
+          <img src={upload} className="upload-btn" />
         </button>
+
+        </div>
+
+
       </form>
     </div>
   );

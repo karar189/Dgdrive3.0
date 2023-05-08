@@ -30,14 +30,47 @@
 .button:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
-.address {
+/* .address {
   display: block;
   margin: auto;
   height: 30px;
   width: 330px;
   text-align: center;
-}
+} */
 
 input[type="text"]:focus {
-  background-color: lightblue;
+  background-color: transparent;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mirror2{
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.156);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 40vw;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.button{
+  margin-right: 35px;
+}
+
+.address{
+  background: transparent;
+  color: aqua;
+  border-radius: 24px;
+  border: none;
 }
