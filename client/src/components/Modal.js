@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./Modal.css";
 const Modal = ({ setModalOpen, contract }) => {
   const sharing = async () => {
-    const address = document.querySelector(".address").value;
+    const address = document.querySelector(".address2").value;
     await contract.allow(address);
     setModalOpen(false);
   };

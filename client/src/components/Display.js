@@ -20,17 +20,11 @@ const Display = ({ contract, account }) => {
     const isEmpty = Object.keys(dataArray).length === 0;
 
     if (!isEmpty) {
-      const str = dataArray.toString();
-      const str_array = str.split(",");
-      console.log(str);
-      console.log(str_array);
-      const images = str_array.map((item, i) => {
-        return (
-          <a href={item} key={i} target="_blank">
-            <img key={i} src={`${item}`} alt="new" className="image-list"></img>
-          </a>
-        );
-      });
+      const images = dataArray.map((item, i) => (
+        <a href={item} key={i} target="_blank">
+          <img src={item} alt="new" className="image-list" />
+        </a>
+      ));
       setData(images);
     } else {
       alert("No image to display");
