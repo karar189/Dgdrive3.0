@@ -5,19 +5,26 @@
 input[type="file"] {
   display: none;
 }
+.choosebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
 
 .choose {
   background-color: initial;
-  background-image: linear-gradient(-180deg, #5aff15, #00b712);
+
   border-radius: 6px;
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 6px;
   margin-right: 10px;
-  padding-bottom: 10px;
+
+  /* padding-bottom: 10px; */
 }
 .choose:hover {
-  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+  box-shadow: rgba(217, 211, 208, 0.386) 0 3px 8px;
 }
 .textArea {
   color: white;
@@ -25,7 +32,7 @@ input[type="file"] {
 
 .upload {
   border: 1px solid #13aa52;
-  background-color: #13aa52;
+  background-color: #2da05d;
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 6px;
@@ -34,15 +41,15 @@ input[type="file"] {
 
 .upload:hover {
   border: 1px solid #13aa52;
-  background-color: #a5efc1;
+  background-color: #69ac82;
   color: #ffffff;
   padding: 5px 10px;
 }
 
 .upload:disabled,
 .upload[disabled] {
-  border: 1px solid #999999;
-  background-color: #cccccc;
+  border: 1px solid #99999900;
+  background-color: #ffffff00;
   color: #666666;
 }
 
@@ -50,12 +57,12 @@ div {
   padding: 5px 10px;
 }
 
-.form{
+.form {
   display: flex;
   justify-content: center;
 }
 
-.mirror{
+.mirror {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.156);
   backdrop-filter: blur(4px);
@@ -69,6 +76,7 @@ div {
   justify-content: space-around;
 }
 
-.upload-btn{
+.upload-btn {
   width: 2vw;
+  color: #ffffff;
 }

@@ -30,8 +30,9 @@ const Modal = ({ setModalOpen, contract }) => {
           <div className="body">
             <input
               type="text"
-              className="address"
+              className="address2"
               placeholder="Enter Address"
+              style={{ color: "black" }}
             ></input>
           </div>
           <form id="myForm">

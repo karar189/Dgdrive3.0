@@ -42,14 +42,13 @@ input[type="text"]:focus {
   background-color: transparent;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.mirror2{
+.mirror2 {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.156);
   backdrop-filter: blur(4px);
@@ -63,14 +62,53 @@ input[type="text"]:focus {
   justify-content: space-around;
 }
 
-
-.button{
-  margin-right: 35px;
+.button {
+  margin-right: 75px;
+  color: black;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-.address{
+.mirror2 input {
   background: transparent;
-  color: aqua;
-  border-radius: 24px;
   border: none;
+  color: white;
+  width: 60%;
+  height: 100%;
+  /* text-align: center; */
+}
+
+.address {
+  background: transparent;
+  color: rgb(232, 232, 232);
+  padding-left: 30px;
+  border: none;
+}
+.address textarea:focus,
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(248, 248, 248);
+  opacity: 1; /* Firefox */
+  text-align: left;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(248, 248, 248);
+  text-align: left;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(248, 248, 248);
+  text-align: left;
 }

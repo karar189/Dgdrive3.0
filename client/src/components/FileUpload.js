@@ -52,30 +52,27 @@ const FileUpload = ({ contract, account, provider }) => {
   return (
     <div className="top">
       <form className="form" onSubmit={handleSubmit}>
-
         <div className="mirror">
+          <input
+            disabled={!account}
+            type="file"
+            id="file-upload"
+            name="data"
+            onChange={retrieveFile}
+          />
 
-        <label htmlFor="file-upload" className="choose">
-          Choose Image
-        </label>
+          <span className="textArea">Image: {fileName}</span>
 
-        <input
-          disabled={!account}
-          type="file"
-          id="file-upload"
-          name="data"
-          onChange={retrieveFile}
-        />
-
-        <span className="textArea">Image: {fileName}</span>
-
-        <button type="submit" className="upload" disabled={!file}>
-          <img src={upload} className="upload-btn" />
-        </button>
-
+          <div className="choosebox">
+            {" "}
+            <label htmlFor="file-upload" className="choose">
+              Choose Image
+            </label>
+            <button type="submit" className="upload" disabled={!file}>
+              <img src={upload} className="upload-btn" />
+            </button>
+          </div>
         </div>
-
-
       </form>
     </div>
   );

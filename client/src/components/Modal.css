@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modalContainer {
@@ -80,5 +81,5 @@
 }
 
 input[type="text"]:focus {
-  background-color: lightblue;
+  background-color: rgba(173, 216, 230, 0);
 }

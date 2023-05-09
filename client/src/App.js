@@ -47,9 +47,11 @@ function App() {
   return (
     <>
       {!modalOpen && (
-        <button className="share" onClick={() => setModalOpen(true)}>
-          Share
-        </button>
+        <div className="sharepa">
+          <button className="share" onClick={() => setModalOpen(true)}>
+            Share
+          </button>
+        </div>
       )}
       {modalOpen && (
         <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
@@ -70,7 +72,7 @@ function App() {
           provider={provider}
           contract={contract}
         ></FileUpload>
-        
+
         <Display contract={contract} account={account}></Display>
       </div>
     </>
