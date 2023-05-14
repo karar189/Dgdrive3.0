@@ -51,6 +51,24 @@ function App() {
           <button className="share" onClick={() => setModalOpen(true)}>
             Share
           </button>
+          <button
+            className="share2"
+            onClick={async () => {
+              if (window.ethereum) {
+                try {
+                  await window.ethereum.request({
+                    method: "eth_requestAccounts",
+                  });
+                } catch (error) {
+                  console.error(error);
+                }
+              } else {
+                console.error("Metamask is not installed");
+              }
+            }}
+          >
+            Connect you account
+          </button>
         </div>
       )}
       {modalOpen && (
@@ -59,11 +77,11 @@ function App() {
 
       <div className="App">
         <h1 style={{ color: "white" }}>GDrive3</h1>
-        {/* <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div> */}
+        <p style={{ color: "white", marginTop: "-60px", fontSize: "32px" }}>
+          The drive you love, Just got better.
+        </p>
 
-        <p style={{ color: "white" }}>
+        <p style={{ color: "#eee47a" }}>
           Account : {account ? account : "Not connected"}
         </p>
 
